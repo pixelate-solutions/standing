@@ -1,0 +1,12 @@
+{
+  "name": "@standing/example-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/buy.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@standing/sdk": "workspace:*"
+  }
+}

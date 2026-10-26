@@ -1,0 +1,35 @@
+{
+  "name": "@standing/sdk",
+  "version": "0.1.0",
+  "description": "Check AI agents' standing before you trust them, and sign requests from your own agents.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./agent": {
+      "types": "./dist/agent.d.ts",
+      "default": "./dist/agent.js"
+    },
+    "./testing": {
+      "types": "./dist/testing.d.ts",
+      "default": "./dist/testing.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "web-bot-auth": "^0.2.0"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.2"
+  }
+}

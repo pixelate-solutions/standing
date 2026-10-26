@@ -1,0 +1,29 @@
+{
+  "name": "standing",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter ./packages/* build",
+    "dev": "pnpm build && pnpm -r --parallel --filter @standing/api --filter @standing/web dev",
+    "db:migrate": "pnpm --filter @standing/api migrate",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm build && pnpm -r test",
+    "test:e2e": "pnpm build && playwright test",
+    "check": "pnpm typecheck && pnpm test && pnpm test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@standing/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "migrate": "tsx src/migrate.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "hono": "^4.13.11",
+    "postgres": "^3.4.9",
+    "web-bot-auth": "^0.2.0",
+    "zod": "^4.1.0",
+    "http-message-sig": "^0.3.0",
+    "@standing/sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.2"
+  }
+}
